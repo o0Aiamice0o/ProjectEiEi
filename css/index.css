@@ -1,0 +1,368 @@
+
+/* RAINBOW COLOR */
+body{
+	background-color: rgb(99, 162, 210);
+	margin: auto;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	overflow: auto;
+	background: rgb(34,108,91);
+	background: radial-gradient(circle, rgb(106, 128, 177) 0%, rgb(100, 99, 186) 35%, rgb(95, 110, 196) 59%, rgb(103, 150, 217) 100%);
+	animation: gradient 25s ease infinite;
+	background-size: 400% 400%;
+	background-attachment: fixed;
+	min-height: 100vh;
+	justify-content: center;
+}
+
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+/* RAINBOW COLOR */
+/* ************************************************** */
+/* TEXT BOX */
+/* ************************************************** */
+  textarea:focus,
+  input:focus {
+	outline: 0;
+  }
+  /* Question */
+  
+  input.question,
+  textarea.question {
+	font-size: 36px;
+	font-weight: 300;
+	border-radius: 2px;
+	margin: 0;
+	border: none;
+	width: 80%;
+	background: rgba(249, 246, 246, 0);
+	transition: padding-top 0.2s ease, margin-top 0.2s ease;
+	overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+  }
+  /* Underline and Placeholder */
+  
+  input.question + label,
+  textarea.question + label {
+	display: block;
+	position: relative;
+	white-space: nowrap;
+	padding: 0;
+	margin: 0;
+	width: 10%;
+	border-top: 1px solid rgb(141, 211, 240);
+	-webkit-transition: width 0.4s ease;
+	transition: width 0.4s ease;
+	height: 0px;
+  }
+  
+  input.question:focus + label,
+  textarea.question:focus + label {
+	width: 80%;
+  }
+  
+  input.question:focus,
+  input.question:valid {
+	padding-top: 35px;
+  }
+  
+  textarea.question:valid,
+  textarea.question:focus {
+	margin-top: 35px;
+  }
+  
+  input.question:focus + label > span,
+  input.question:valid + label > span {
+	top: -100px;
+	font-size: 33px;
+	color:rgb(141, 211, 240);
+  }
+  
+  textarea.question:focus + label > span,
+  textarea.question:valid + label > span {
+	top: -150px;
+	font-size:33px;
+	color:rgb(141, 211, 240);
+  }
+  
+  input.question:valid + label,
+  textarea.question:valid + label {
+	border-color:rgb(141, 211, 240);
+  }
+  
+  input.question:invalid,
+  textarea.question:invalid {
+	box-shadow: none;
+  }
+  
+  input.question + label > span,
+  textarea.question + label > span {
+	font-weight: 300;
+	margin: 0;
+	position: absolute;
+	color: #eae4e4;
+	font-size: 32px;
+	top: -66px;
+	left: 0px;
+	z-index: -1;
+	-webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+	transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+  /* บนมุมซ้ายขวา */
+  .navbar{
+	padding:90px;
+	font-family: 'Itim', cursive;
+	background-color: white;
+	-webkit-box-shadow: -5px 7px 8px 0px rgba(237, 229, 229, 0.58);
+	-moz-box-shadow: -5px 7px 8px 0px rgba(40, 38, 38, 0.58);
+	box-shadow: -5px 7px 8px 0px rgba(38, 37, 37, 0.58);	
+  }
+  .navbar-left,
+  .navbar-right{
+	display: flex;
+	align-items: center;	
+}
+  .navbar-left div{
+	text-transform: uppercase;
+	font-weight: 800;
+	padding: 20px;
+  }	
+  .add-data{
+	font-weight: 50px;
+  }
+/* ************************************************** */
+/* TEXT BOX */
+/* ************************************************** */
+  /* ระยะห่างมุมซ้ายและขวา */
+  .navbar-left > * ,
+  .navbar-right > * {
+	margin:10px;
+  }
+  /* บนมุมขวา */
+  .button-right{
+	display:flex;
+	align-items: center;
+	font-weight: 500;
+  }
+  /* DROP DOWN Table */
+  /*Styling Selectbox*/
+  .dropdown {
+	width: 100px;
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 2px rgb(204, 204, 204);
+	transition: all .5s ease;
+	position: relative;
+	font-size: 14px;
+	color: #474747;
+	text-align: center
+  }
+  .dropdown .select {
+	  cursor: pointer;
+	  display: block;
+	  padding: 10px
+  }
+  .dropdown .select > i {
+	  font-size: 13px;
+	  color: #888;
+	  cursor: pointer;
+	  transition: all .3s ease-in-out;
+	  float: right;
+	  line-height: 20px
+  }
+  .dropdown:hover {
+	  box-shadow: 0 0 4px rgb(204, 204, 204)
+  }
+  .dropdown:active {
+	  background-color: #f8f8f8
+  }
+  .dropdown.active:hover,
+  .dropdown.active {
+	  box-shadow: 0 0 4px rgb(204, 204, 204);
+	  border-radius: 2px 2px 0 0;
+	  background-color: #f8f8f8
+  }
+  .dropdown.active .select > i {
+	  transform: rotate(-90deg)
+  }
+  .dropdown .dropdown-menu {
+	  position: absolute;
+	  background-color: #fff;
+	  width: 100%;
+	  left: 0;
+	  margin-top: 1px;
+	  box-shadow: 0 1px 2px rgb(204, 204, 204);
+	  border-radius: 0 1px 2px 2px;
+	  overflow: hidden;
+	  display: none;
+	  max-height: 144px;
+	  overflow-y: auto;
+	  z-index: 9;
+	  min-width: 0rem;
+  }
+  .dropdown .dropdown-menu li {
+	  padding: 10px;
+	  transition: all .2s ease-in-out;
+	  cursor: pointer
+  } 
+  .dropdown .dropdown-menu {
+	  padding: 0;
+	  list-style: none
+  }
+  .dropdown .dropdown-menu li:hover {
+	  background-color: #525050
+  }
+  .dropdown .dropdown-menu li:active {
+	  background-color: #525050
+  }
+  /*END Styling Selectbox*/
+
+ /* BBCAL DATA Animated Effect */
+.content{
+	position: relative;
+}
+.content h1{
+	position: absolute;
+	transform:translate(-50%,-50%);
+	font-size:66;
+	padding-left: 390%;
+}
+.content h1:nth-child(1){
+	color:transparent;
+	-webkit-text-stroke: 2px #1e23b8;
+}
+.content h1:nth-child(2){
+	color:#1e23b8;
+	animation:animate 2s ease-in-out infinite;
+}
+@keyframes animate{
+0% , 100%{
+	clip-path:polygon(0% 45%,15% 44%,32% 50%,54% 60%,70% 61%,84% 59%,100% 52%,100% 100%,0% 100%)
+}
+50%{
+	clip-path:polygon(0% 60%,16% 65%,34% 66%,51% 62%,67% 50%,84% 45%,100% 46%,100% 100%,0% 100%)
+}
+}
+/* END BBCAL DATA Animated Effect */
+/* TABLE */
+main.table{
+	backdrop-filter: blur(10px);
+	box-shadow: 0.4rem .8rem #0005;
+	border-radius: .8rem;
+	background-color: #fff5;
+	/* overflow: hidden; */
+}
+/* TABLE */
+/* TABLE HEADER */
+.table_header{
+	width: 100%;
+	height:9%;
+	background-color: #fff4;
+	padding: .8rem 1rem;
+}
+/* TABLE HEADER */
+/* TABLE BODY */
+.table_body{
+	width: 95%;
+	max-height: calc(89%-.8rem);
+
+	margin: .5rem auto;
+	border-radius: .10rem;
+
+	overflow:auto;
+}
+
+.table_body::-webkit-scrollbar-thumb{
+	border-radius: .5rem;
+	background-color: #0004;
+	visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb{
+	visibility: visible;
+}
+
+td{
+	width: 36px;
+	height: 36px;
+	margin-right: .5rem;
+	border-radius: 50%;
+	vertical-align: middle;
+	 
+}
+
+table,th,td{
+	padding: 1rem;
+}
+
+.dropdown-items{
+	display: block;
+	padding: 8px;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+}
+
+a:hover {
+	background-color: rgb(218, 218, 218);
+  }
+
+/* TABLE BODY */
+/* a link */
